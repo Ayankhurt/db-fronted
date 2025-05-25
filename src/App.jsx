@@ -12,7 +12,6 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   const baseUrl = 'https://backend-db-seven.vercel.app';
-  // const baseUrl = 'http://localhost:3000';
 
   const getProducts = async () => {
     try {
