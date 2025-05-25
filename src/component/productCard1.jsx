@@ -13,6 +13,8 @@ function ProductCard({ product, onDelete, onUpdate }) {
     description: product.description,
   });
 
+  const baseUrl = 'https://backend-db-seven.vercel.app';
+
   const handleClose = () => {
     Swal.fire({
       title: 'Discard changes?',
@@ -53,7 +55,7 @@ function ProductCard({ product, onDelete, onUpdate }) {
 
     setIsLoading(true);
     try {
-      await axios.delete(`http://localhost:3000/product/${product.id}`);
+      await axios.delete(`${baseUrl}/product/${product.id}`);
       onDelete(product.id);
       Swal.fire(
         'Deleted!',
@@ -84,7 +86,7 @@ function ProductCard({ product, onDelete, onUpdate }) {
 
     setIsLoading(true);
     try {
-      await axios.put(`http://localhost:3000/product/${product.id}`, editedProduct);
+      await axios.put(`${baseUrl}/product/${product.id}`, editedProduct);
       onUpdate();
       setShowModal(false);
       Swal.fire({
