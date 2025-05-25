@@ -11,7 +11,7 @@ function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const baseUrl = 'https://backend-db-tau.vercel.app';
+  const baseUrl = 'https://backend-db-seven.vercel.app';
   // const baseUrl = 'http://localhost:3000';
 
   const getProducts = async () => {
